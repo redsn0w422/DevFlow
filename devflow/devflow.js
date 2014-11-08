@@ -1,3 +1,13 @@
+classes = new Meteor.Collection("classes");
+Meteor.methods({
+  addFav: function (name, fav_name) {
+    var user = Meteor.users.findOne({'username': fav_name});
+    var favList = user.fav_list;
+    favList.push(name);
+    Meteor.users.update({'username': fav_name}, {$set: {'fav_list': favList}});
+  }
+});
+
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
