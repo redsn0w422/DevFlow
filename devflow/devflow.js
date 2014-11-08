@@ -27,7 +27,7 @@ Router.route('/signup', function () {
 
 Router.route('/profile', function () {
   this.render('Profile');
-}
+});
 
 if (Meteor.isClient) {
   Accounts.ui.config({

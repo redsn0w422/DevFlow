@@ -22,9 +22,6 @@ html-tools@1.0.2
 htmljs@1.0.2
 http@1.0.8
 id-map@1.0.1
-<<<<<<< HEAD
-=======
-insecure@1.0.1
 iron:controller@1.0.0
 iron:core@1.0.0
 iron:dynamic-template@1.0.0
@@ -33,7 +30,6 @@ iron:location@1.0.1
 iron:middleware-stack@1.0.0
 iron:router@1.0.1
 iron:url@1.0.0
->>>>>>> front-end
 jquery@1.0.1
 json@1.0.1
 launch-screen@1.0.0
