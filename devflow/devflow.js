@@ -39,6 +39,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Accounts.onCreateUser(function(options, user){
     // define all of the variables for the user
+    return user;
   });
 
   Meteor.publish("userData", function() {
