@@ -34,30 +34,6 @@ if (Meteor.isClient) {
     passwordSignupFields: 'USERNAME_ONLY'
   });
 
-  Template.menubar.events({
-    'click #searchFilter': function () {
-      Session.set("filterVal", $("#searchFilter").val());
-    }
-  });
-
-  Template.menubar.events({
-    'click #search' : function (event) {
-      Session.set("filterVal", parseInt(Session.get("filterVal")) + 4);
-    }
-  });
-
-  // Template.hello.helpers({
-  //   counter: function () {
-  //     return Session.get("counter");
-  //   }
-  // });
-  //
-  // Template.hello.events({
-  //   'click button': function () {
-  //     // increment the counter when button is clicked
-  //     Session.set("counter", Session.get("counter") + 1);
-  //   }
-  // });
 }
 
 if (Meteor.isServer) {
@@ -67,5 +43,9 @@ if (Meteor.isServer) {
 
   Meteor.publish("userData", function() {
     return Meteor.user.find();
+  });
+
+  Meteor.publish("comments", function() {
+    return comments.find();
   });
 }
