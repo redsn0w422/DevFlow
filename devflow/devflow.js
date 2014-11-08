@@ -10,13 +10,15 @@ Meteor.methods({
   comments: function(comment_text, user_profile, user_property, time) {
 
   }
-  
 });
 
 Router.route('/', function () {
   this.render('Main');
 });
 
+Router.route('/explore', function () {
+    this.render('Explore');
+});
 
 Router.route('/login', function () {
   this.render('Login');
@@ -27,12 +29,10 @@ Router.route('/signup', function () {
 });
 
 
-Router.route('/profile', function () {
-  this.render('Profile');
-});
-
-Router.route('/explore', function () {
-  this.render('Explore');
+Router.route('/profile/:username', function () {
+  this.render('Profile', {
+    user: username
+  });
 });
 
 if (Meteor.isClient) {
@@ -42,15 +42,19 @@ if (Meteor.isClient) {
 
   Meteor.subscribe('userData');
   Meteor.subscribe('comments');
-
 }
 
 if (Meteor.isServer) {
-  // Accounts.onCreateUser(function(options, user){
-  //   // define all of the variables for the user
-  // });
+  Accounts.onCreateUser(function(options, user){
+    // define all of the variables for the user
+    return user;
+  });
 
   Meteor.publish("userData", function() {
     return Meteor.user.find();
+  });
+
+  Meteor.publish("comments", function() {
+    return comments.find();
   });
 }
