@@ -14,6 +14,18 @@ if (Meteor.isClient) {
       Session.set("counter", Session.get("counter") + 1);
     }
   });
+
+    Template.menubar.events({
+    'click #searchFilter': function () {
+      Session.set("filterVal", $("#searchFilter").val());
+    }
+  });
+
+    Template.menubar.events({
+    'click #search' : function (event) {
+      Session.set("filterVal", parseInt(Session.get("filterVal")) + 4);
+    }
+  });
 }
 
 if (Meteor.isServer) {
