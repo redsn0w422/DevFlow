@@ -38,3 +38,7 @@
     font-weight: 300;
     margin-top: 0px;
 }
+
+.navbar-inner {
+    background: transparent;
+}
