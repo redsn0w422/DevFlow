@@ -9,3 +9,5 @@ bootstrap
 accounts-ui
 mizzao:bootstrap-3
 iron:router
+accounts-password
+

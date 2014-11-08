@@ -1,3 +1,17 @@
++comments = new Meteor.Collection("comments");
++
+Meteor.methods({
++ addFav: function (name, fav_name) {
+  +    var user = Meteor.users.findOne({'username': fav_name});
+  +    var favList = user.fav_list;
+  +    favList.push(name);
+  +    Meteor.users.update({'username': fav_name}, {$set: {'fav_list': favList}});
+  },
+  comments: function(comment_text, user_profile, user_property, time) {
+
+  }
+  +
+});
 
 Router.route('/', function () {
   this.render('Main');
@@ -22,6 +36,12 @@ Router.route('/explore', function () {
 });
 
 if (Meteor.isClient) {
+  Accounts.ui.config({
+    passwordSignupFields: 'USERNAME_ONLY'
+  });
+
+  Meteor.subscribe('userData');
+  Meteor.subscribe('comments');
 
 }
 
