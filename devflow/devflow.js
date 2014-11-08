@@ -3,6 +3,20 @@ Router.route('/', function () {
   this.render('Main');
 });
 
+
+Router.route('/login', function () {
+  this.render('Login');
+});
+
+Router.route('/signup', function () {
+  this.render('Signup');
+});
+
+
+Router.route('/profile', function () {
+  this.render('Profile');
+});
+
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
