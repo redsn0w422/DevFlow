@@ -18,17 +18,14 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar-brand-centered">
-        <!-- <ul class="nav navbar-nav navbar-left">
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul> -->
+        <ul class="nav navbar-nav navbar-left">
+          <li>{{> loginButtons}}</li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="explore">Explore</a></li>
           <li><a href="profile">Profile</a></li>
           <li><a href="signup">Sign up</a></li>
           <!-- <li><a href="login">Login</a></li> -->
-          <li>{{> loginButtons}}</li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -90,7 +87,19 @@
 </template>
 
 <template name="Signup">
-
+  <div class="signup-form">
+    <p>First name</p>
+    <form><input type="text" name="firstName" /></form>
+    <p>Last name</p>
+    <form><input type="text" name="lastName" /></form>
+    <p>Email</p>
+    <form><input type="text" name="email" /></form>
+    <p>Username</p>
+    <form><input type="text" name="username" /></form>
+    <p>Password</p>
+    <form><input type="text" name="password" /></form>
+    <button type="button" class="btn btn-success">Submit</button>
+  </div>
 </template>
 
 <template name="Profile">
@@ -98,5 +107,5 @@
 </template>
 
 <template name="Explore">
-  
+
 </template>
