@@ -17,6 +17,10 @@ Router.route('/profile', function () {
   this.render('Profile');
 });
 
+Router.route('/explore', function () {
+  this.render('Explore');
+});
+
 if (Meteor.isClient) {
 
 }
