@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 classes = new Meteor.Collection("classes");
 Meteor.methods({
   addFav: function (name, fav_name) {
@@ -11,18 +12,22 @@ Meteor.methods({
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
+=======
+comments = new Meteor.Collection("comments");
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
-    }
-  });
+Meteor.methods({
+  comment: function (comment_text, user_profile, user_property, time) {
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set("counter", Session.get("counter") + 1);
-    }
+  },
+
+>>>>>>> Stashed changes
+
+
+});
+
+if (Meteor.isClient) {
+  Accounts.ui.config({
+    passwordSignupFields: 'USERNAME_ONLY'
   });
 
     Template.menubar.events({
@@ -39,9 +44,9 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-  // Accounts.onCreateUser(function(options, user){
-  //   // define all of the variables for the user
-  // });
+  Accounts.onCreateUser(function(options, user){
+    // define all of the variables for the user
+  });
 
   Meteor.publish("userData", function() {
     return Meteor.user.find();
