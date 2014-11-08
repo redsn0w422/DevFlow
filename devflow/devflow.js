@@ -15,6 +15,9 @@ Router.route('/', function () {
   this.render('Main');
 });
 
+Router.route('/explore', function () {
+    this.render('Explore');
+});
 
 Router.route('/login', function () {
   this.render('Login');
