@@ -1,4 +1,5 @@
 <head>
+<<<<<<< HEAD
 
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
@@ -31,6 +32,42 @@
 					<li><a href="#plans">Plans</a></li>
 
 <<<<<<< Updated upstream
+=======
+  <title>devflow</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand navbar-brand-centered">devflow</div>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-brand-centered">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+>>>>>>> front-end
   {{> hello}}
   {{> menubar}}
 =======
@@ -42,9 +79,60 @@
 >>>>>>> Stashed changes
 </body>
 
-<template name="hello">
+<!-- <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+</template> -->
+
+
+<template name="login">
+  <div class="container">
+
+  <div class="row" style="margin-top:20px">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form role="form">
+        <fieldset>
+          <h2>Please Sign In</h2>
+          <hr class="colorgraph">
+          <div class="form-group">
+                      <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+          </div>
+          <div class="form-group">
+                      <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+          </div>
+          <span class="button-checkbox">
+            <button type="button" class="btn" data-color="info">Remember Me</button>
+                      <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
+            <a href="" class="btn btn-link pull-right">Forgot Password?</a>
+          </span>
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                          <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <a href="" class="btn btn-lg btn-primary btn-block">Register</a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  </div>
+</template>
+
+<template name="Main">
+<h1 id="title">DevFlow</h1>
+<h3 id="slogan">Share your workflow.</h3>
+</template>
+
+<template name="Signup">
+
+</template>
+
+<template name="profile">
+
 </template>
 
 

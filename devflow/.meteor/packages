@@ -6,4 +6,4 @@
 meteor-platform
 accounts-ui
 mizzao:bootstrap-3
-
+iron:router

@@ -1,6 +1,8 @@
-<<<<<<< Updated upstream
 classes = new Meteor.Collection("classes");
 Meteor.methods({
+  comment: function (comment_text, user_profile, user_property, time) {
+
+  },
   addFav: function (name, fav_name) {
     var user = Meteor.users.findOne({'username': fav_name});
     var favList = user.fav_list;
@@ -9,21 +11,23 @@ Meteor.methods({
   }
 });
 
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
-=======
-comments = new Meteor.Collection("comments");
-
-Meteor.methods({
-  comment: function (comment_text, user_profile, user_property, time) {
-
-  },
-
->>>>>>> Stashed changes
-
-
+Router.route('/', function () {
+  this.render('Main');
 });
+
+
+Router.route('/login', function () {
+  this.render('Login');
+});
+
+Router.route('/signup', function () {
+  this.render('Signup');
+});
+
+
+Router.route('/profile', function () {
+  this.render('Profile');
+}
 
 if (Meteor.isClient) {
   Accounts.ui.config({
