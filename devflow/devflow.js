@@ -34,17 +34,30 @@ if (Meteor.isClient) {
     passwordSignupFields: 'USERNAME_ONLY'
   });
 
-    Template.menubar.events({
+  Template.menubar.events({
     'click #searchFilter': function () {
       Session.set("filterVal", $("#searchFilter").val());
     }
   });
 
-    Template.menubar.events({
+  Template.menubar.events({
     'click #search' : function (event) {
       Session.set("filterVal", parseInt(Session.get("filterVal")) + 4);
     }
   });
+
+  // Template.hello.helpers({
+  //   counter: function () {
+  //     return Session.get("counter");
+  //   }
+  // });
+  //
+  // Template.hello.events({
+  //   'click button': function () {
+  //     // increment the counter when button is clicked
+  //     Session.set("counter", Session.get("counter") + 1);
+  //   }
+  // });
 }
 
 if (Meteor.isServer) {
