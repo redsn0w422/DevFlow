@@ -17,7 +17,11 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
+  Accounts.onCreateUser(function(options, user){
+    // define all of the variables for the user
+  });
+
+  Meteor.publish("userData", function() {
+    return Meteor.user.find();
   });
 }
