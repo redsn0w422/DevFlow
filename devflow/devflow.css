@@ -38,3 +38,17 @@
     font-weight: 300;
     margin-top: 0px;
 }
+
+#searchTitle {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin-bottom: 0px;
+    font-size: 3em;
+}
+
+#searchButton {
+    position:relative;
+    left: 50%;
+    margin-top:50%;
+}
