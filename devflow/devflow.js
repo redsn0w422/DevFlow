@@ -28,9 +28,13 @@ Router.route('/signup', function () {
 });
 
 
-Router.route('/profile', function () {
-  this.render('Profile');
+Router.route('/profile/:username', function () {
+  this.render('Profile', {
+    user: username
+  });
 });
+
+
 
 if (Meteor.isClient) {
   Accounts.ui.config({

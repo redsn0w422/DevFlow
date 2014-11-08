@@ -13,7 +13,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <div class="navbar-brand navbar-brand-centered">devflow</div>
+        <div class="navbar-brand navbar-brand-centered">devflow
+			<br/>
+        	{{> loginButtons}}
+        </div>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -87,6 +90,8 @@
 </template>
 
 <template name="Profile">
+
+	{{user}}
 
 </template>
 
