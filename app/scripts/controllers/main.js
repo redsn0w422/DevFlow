@@ -16,19 +16,18 @@ myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http) {
         $scope.user = {};
         $http.get('https://devflow.firebaseio.com/users.json')
         .success(function(data) {
-
+        var hitCount = 0;
             for (var key in data) {
                 var obj = data[key];
                 if (obj.name === $scope.query) {
-                    $scope.name="works";
-                    console.log($scope.name);
                     $scope.user = obj;
-                    break;
+                    ++hitCount;
                 }
-                else {
-                    $scope.name="no";
-                    console.log($scope.name);
-                }
+            }
+            if (hitCount > 0) {
+                $scope.name="Found " + hitCount + " User";
+            } else {
+                $scope.name="Found no users by that name";
             }
         });
     };
