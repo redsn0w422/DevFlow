@@ -12,7 +12,8 @@ angular.module('devFlowApp')
     var ref = new Firebase('https://devflow.firebaseio.com/users');
 	var sync = $firebase(ref);
 	$scope.user = {};
-	$scope.name = "niraj";
+	$scope.foundUsername = false;
+
 	$http.get('https://devflow.firebaseio.com/users.json')
 	.success(function(data) {
 		console.log(data);
@@ -22,6 +23,7 @@ angular.module('devFlowApp')
 			if (obj.name === $routeParams.username) {
 				console.log('works');
 				$scope.user = obj;
+				$scope.foundUsername = true;
 			}
 			else {
 				console.log('no');
