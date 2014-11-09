@@ -23,7 +23,7 @@ myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http) {
                 var obj = data[key];
                 if (magic.test( (obj.name.toLowerCase()) )) {
                     ++hitCount;
-                    $scope.results.push(obj.name);
+                    $scope.results.push(obj);
                 }
             }
             if (hitCount > 0) {

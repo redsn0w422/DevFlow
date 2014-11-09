@@ -31,6 +31,6 @@
   <label>{{name}}</label>
 </form>
 <ul>
-    <li ng-repeat="result in results">{{result}}</li>
+    <li ng-repeat="result in results"><a href="/#/profile/{{result.username}}">{{result.name}}</a></li>
 </ul>
 <!-- Top starred -->
