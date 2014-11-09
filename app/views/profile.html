@@ -1,94 +1,3 @@
-<div class="row">
-	<div class="container">
-	    <div class="row user">
-	        <div class="col-md-3">
-	        	<img src="http://www.gravatar.com/avatar/d2bc887c8ca8cfded744a5fbcaba8e79?s=150&r=x&d=retro"/>
-	        </div>
-	        <div class="col-md-8">
-	        	<h1>Kian Fotovat</h1>
-	        	<small style="font-size:20px; text-align:left; float:left;" class="text-left"><i>Developer</i></small>
-	        	<br/>
-	        	<hr>
-	        	<p style="text-align:left;">omg this is a bio! I am kifsfojws faewounwao fawe fa w faw ef wafewafewa  fewafewaff wafewa faew an fotovat. I make things for a living. i am a hipster. this is some more about me i'm really interesting. I wonder if this will look okay.</p>
-	        </div>
-	    </div>
-	    <br/>
-	    <br/>
-	    <div class="row lang">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Favorite Language:</p>
-	    	</div>
-	    	<div class="col-md-5">
-	    		<p>i like brazilian huehue</p>
-	    	</div>
-	    </div>
-	    <div class="row ide">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Favorite IDE:</p>
-	    	</div>
-	    	<div class="col-md-5">
-	    		<p>i like visualstudio huehue</p>
-	    	</div>
-	    </div>
-	    <div class="row design">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Favorite Design Suite:</p>
-	    	</div>
-	    	<div class="col-md-5">
-	    		<p>i like mspaint.exe huehue</p>
-	    	</div>
-	    </div>
-	    <div class="row work">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Occupation:</p>
-	    	</div>
-		    <div class="col-md-5">
-		    	<p>i work at lawn huehue</p>
-		    </div>
-		</div>
-		<div class="row space">
-			<div class="col-md-4">
-				<p style="font-size:18px">Workspace:</p>
-			</div>
-		    <div class="col-md-5">
-		    	<img src="http://blacklabelsociety.com/home/wp-content/uploads/2014/01/spacer.jpg" height="200" width="450"/>
-		    </div>
-	    </div>
-	    <br/>
-	    <div class="row projects">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Projects:</p>
-	    	</div>
-	    	<div class"col-md-offset-3 col-md-5">
-	    		<p>i did a bunch of tings like mow all dese lawnz!!1!!</p>
-	    	</div>
-	    </div>
-	    <div class="row twitter">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Twitter:</p>
-	    	</div>
-	    	<div class"col-md-offset-3 col-md-5">
-	    		<p>@sexxxi_espaniol_boi</p>
-	    	</div>
-	    </div>
-	    <div class="row github">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Github:</p>
-	    	</div>
-	    	<div class"col-md-offset-3 col-md-5">
-	    		<p>@sexxxi_espaniol_boi</p>
-	    	</div>
-	    </div>
-	    <div class="row site">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Website:</p>
-	    	</div>
-	    	<div class"col-md-offset-3 col-md-5">
-	    		<p>http://sexxxi.espaniol.boi.mx</p>
-	    	</div>
-	    </div>
-	</div>
-</div>
 <div class="error" ng-show="!foundUsername" ng-cloak>
 	<h1>pls</h1>
 </div>
@@ -167,5 +76,29 @@
 				<p>{{user.projects}}</p>
 			</div>
 		</div>
+		<div class="row twitter">
+	    	<div class="col-md-4">
+	    		<p style="font-size:18px">Twitter:</p>
+	    	</div>
+	    	<div class"col-md-offset-3 col-md-5">
+	    		<p>{{user.twitter}}/p>
+	    	</div>
+	    </div>
+	    <div class="row github">
+	    	<div class="col-md-4">
+	    		<p style="font-size:18px">Github:</p>
+	    	</div>
+	    	<div class"col-md-offset-3 col-md-5">
+	    		<p>{{user.github}}</p>
+	    	</div>
+	    </div>
+	    <div class="row site">
+	    	<div class="col-md-4">
+	    		<p style="font-size:18px">Website:</p>
+	    	</div>
+	    	<div class"col-md-offset-3 col-md-5">
+	    		<p><a href="http://{{user.personalSite}}">http://{{user.personalSite}}</p>
+	    	</div>
+	    </div>
 	</div>
 </div>
