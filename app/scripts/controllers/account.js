@@ -7,12 +7,23 @@
  * Provides rudimentary account management functions.
  */
 angular.module('devFlowApp')
-  .controller('AccountCtrl', function ($scope, user, simpleLogin, fbutil, $timeout, $rootScope) {
+  .controller('AccountCtrl', function ($scope, user, simpleLogin, fbutil, $timeout, $rootScope, $http) {
     $scope.user = user;
     $rootScope.user = user;
+    var uid = $rootScope.user.uid;
     $scope.logout = simpleLogin.logout;
     $scope.messages = [];
     loadProfile(user);
+
+    $http.get('https://devflow.firebaseio.com/users.json')
+    .success(function(data) {
+        for (var key in data) {
+            var obj = data[key];
+            if (key.toLowerCase() === uid.toLowerCase()) {
+                $scope.user = obj;
+            }
+        }
+    });
 
     $scope.changePassword = function(oldPass, newPass, confirm) {
       $scope.err = null;
