@@ -1,16 +1,16 @@
 <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <!-- //angularfire -->
-          <li><a ng-href="#/chat">chat</a></li>
-          <li>
-            <a ng-hide-auth="" href="#/login">log in</a>
-            <a ng-show-auth="" href="#/account">account</a>
-          </li>
-          </ul>
-          <!-- <img src="images/logo.png" height="50" width="auto"/> -->
-          <h3 class="text-muted">devFlow</h3>
-      </div>
+	<ul class="nav nav-pills pull-right">
+		<li class="active"><a ng-href="#">Home</a></li>
+		<!-- //angularfire -->
+		<li><a ng-href="#/chat">chat</a></li>
+		<li>
+			<a ng-hide-auth="" href="#/login">log in</a>
+			<a ng-show-auth="" href="#/account">account</a>
+		</li>
+	</ul>
+	<!-- <img src="images/logo.png" height="50" width="auto"/> -->
+	<h3 class="text-muted">devFlow</h3>
+</div>
 
 <div class="error" ng-show="!foundUsername" ng-cloak>
 	<h1>pls</h1>
@@ -80,39 +80,39 @@
 				<img src="http://blacklabelsociety.com/home/wp-content/uploads/2014/01/spacer.jpg" height="200" width="450"/>
 			</div>
 		</div>
- 		-->		
- 		<br/>
-		<div class="row projects">
-			<div class="col-md-4">
-				<p style="font-size:18px">Projects:</p>
-			</div>
-			<div class="col-md-offset-3 col-md-5">
-				<p style="line-height:25px">{{user.projects}}</p>
-			</div>
+	-->		
+	<br/>
+	<div class="row projects">
+		<div class="col-md-4">
+			<p style="font-size:18px">Projects:</p>
 		</div>
-		<div class="row twitter">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Twitter:</p>
-	    	</div>
-	    	<div class="col-md-offset-3 col-md-5">
-	    		<p style="line-height:25px"><a href="https://twitter.com/{{user.twitter}}">{{user.twitter}}</a></p>
-	    	</div>
-	    </div>
-	    <div class="row github">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Github:</p>
-	    	</div>
-	    	<div class="col-md-offset-3 col-md-5">
-	    		<p style="line-height:25px"><a href="https://github.com/{{user.github}}">{{user.github}}</a></p>
-	    	</div>
-	    </div>
-	    <div class="row site">
-	    	<div class="col-md-4">
-	    		<p style="font-size:18px">Website:</p>
-	    	</div>
-	    	<div class="col-md-offset-3 col-md-5">
-	    		<p style="line-height:25px"><a href="http://{{user.personalSite}}">http://{{user.personalSite}}</p>
-	    	</div>
-	    </div>
+		<div class="col-md-offset-3 col-md-5">
+			<p style="line-height:25px">{{user.projects}}</p>
+		</div>
 	</div>
+	<div class="row twitter">
+		<div class="col-md-4">
+			<p style="font-size:18px">Twitter:</p>
+		</div>
+		<div class="col-md-offset-3 col-md-5">
+			<p style="line-height:25px"><a href="https://twitter.com/{{user.twitter}}">{{user.twitter}}</a></p>
+		</div>
+	</div>
+	<div class="row github">
+		<div class="col-md-4">
+			<p style="font-size:18px">Github:</p>
+		</div>
+		<div class="col-md-offset-3 col-md-5">
+			<p style="line-height:25px"><a href="https://github.com/{{user.github}}">{{user.github}}</a></p>
+		</div>
+	</div>
+	<div class="row site">
+		<div class="col-md-4">
+			<p style="font-size:18px">Website:</p>
+		</div>
+		<div class="col-md-offset-3 col-md-5">
+			<p style="line-height:25px"><a href="http://{{user.personalSite}}">http://{{user.personalSite}}</p>
+		</div>
+	</div>
+</div>
 </div>
