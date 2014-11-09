@@ -17,6 +17,7 @@ myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http) {
         $http.get('https://devflow.firebaseio.com/users.json')
         .success(function(data) {
         var hitCount = 0;
+        console.log("succeeded at getting users");
             for (var key in data) {
                 var obj = data[key];
                 if (obj.name === $scope.query) {
