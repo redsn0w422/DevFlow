@@ -21,7 +21,8 @@ angular.module('devFlowApp')
 		
 		for (var key in data) {
 			var obj = data[key];
-			if (obj.name === $routeParams.username) {
+			console.log(obj);
+			if (obj.username === $routeParams.username) {
 				console.log('works');
 				$scope.user = obj;
 				console.log($scope.user);
