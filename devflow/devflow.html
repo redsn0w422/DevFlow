@@ -3,12 +3,110 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <nav class="navbar navbar-inner" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">DevFlow</div>
+      </div>
 
-  {{> hello}}
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-brand-centered">
+        <ul class="nav navbar-nav navbar-left">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="explore">Explore</a></li>
+          <li><a href="profile">Profile</a></li>
+          <li><a href="signup">Sign up</a></li>
+          <!-- <li><a href="login">Login</a></li> -->
+          {{> loginButtons}}
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="Explore">
+	<h3 id="searchTitle">Search By UserName</h3>
+	<button id="searchButton" type="button">Search</button>
+</template>
+
+<template name="login">
+  <div class="container">
+
+  <div class="row" style="margin-top:20px">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form role="form">
+        <fieldset>
+          <h2>Please Sign In</h2>
+          <hr class="colorgraph">
+          <div class="form-group">
+                      <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+          </div>
+          <div class="form-group">
+                      <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+          </div>
+          <span class="button-checkbox">
+            <input type="checkbox" checked="checked" id="remember_me" name="remember_me">
+					<label for="remember_me">Stay signed in</label>
+            <a href="" class="btn btn-link pull-right">Forgot Password?</a>
+          </span>
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                          <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <a href="" class="btn btn-lg btn-primary btn-block">Register</a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  </div>
+</template>
+
+<template name="Main">
+<h1 id="title">DevFlow</h1>
+<h3 id="slogan">Share your workflow.</h3>
+
+<div class="row">
+  <div class="col-xs-6 col-md-4">Stay Updated</div>
+  <div class="col-xs-6 col-md-4">Learn New Techniques</div>
+  <div class="col-xs-6 col-md-4">Meet New Developers</div>
+</div>
+</template>
+
+<template name="Signup">
+  <div class="signup-form">
+    <p>First name</p>
+    <form><input type="text" name="firstName" /></form>
+    <p>Last name</p>
+    <form><input type="text" name="lastName" /></form>
+    <p>Email</p>
+    <form><input type="text" name="email" /></form>
+    <p>Username</p>
+    <form><input type="text" name="username" /></form>
+    <p>Password</p>
+    <form><input type="text" name="password" /></form>
+    <button type="button" class="btn btn-success">Submit</button>
+  </div>
+</template>
+
+<template name="Profile">
+
+	{{user}}
+
+</template>
+
+<template name="Explore">
+
 </template>
