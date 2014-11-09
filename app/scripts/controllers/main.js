@@ -10,11 +10,21 @@
  var myapp = angular.module('devFlowApp');
 
  myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http, md5, $rootScope) {
-    console.log('from main ' + $rootScope.user);
-    console.log($rootScope.user);
     $scope.results = [];
     $scope.hashedEmail = "http://www.gravatar.com/avatar/";
-    
+    var uid = $rootScope.user.uid;
+    $scope.user = {};
+
+    $http.get('https://devflow.firebaseio.com/users.json')
+    .success(function(data) {
+        for (var key in data) {
+            var obj = data[key];
+            if (key.toLowerCase() === uid.toLowerCase()) {
+                $scope.user = obj;
+            }
+        }
+    });
+
     $scope.searchOnClick = function () {
         var ref = new Firebase('https://devflow.firebaseio.com/users');
         var sync = $firebase(ref);
