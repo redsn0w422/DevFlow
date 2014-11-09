@@ -1,3 +1,7 @@
+.when('/profile', {
+  templateUrl: 'views/profile.html',
+  controller: 'ProfileCtrl'
+})
 'use strict';
 
 /**

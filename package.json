@@ -37,5 +37,20 @@
   },
   "scripts": {
     "test": "grunt test"
-  }
+  },
+  "description": "CodeDay_Nov_14 ==============",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redsn0w422/CodeDay_Nov_14.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redsn0w422/CodeDay_Nov_14/issues"
+  },
+  "homepage": "https://github.com/redsn0w422/CodeDay_Nov_14"
 }
