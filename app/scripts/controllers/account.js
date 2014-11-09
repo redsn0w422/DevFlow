@@ -8,10 +8,6 @@
  */
 angular.module('devFlowApp')
   .controller('AccountCtrl', function ($scope, user, simpleLogin, fbutil, $timeout, $rootScope) {
-    console.log('from main ' + $rootScope.user);
-    console.log($rootScope.user);
-    $("#profLink").attr("href","#/profile"+$rootScope.user.username);
-    
     $scope.user = user;
     $rootScope.user = user;
     $scope.logout = simpleLogin.logout;

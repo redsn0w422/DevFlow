@@ -8,11 +8,7 @@
  * Controller of the devFlowApp
  */
 angular.module('devFlowApp')
-  .controller('ProfileCtrl', function ($scope, $firebase, $routeParams, $http, md5, $rootScope) {
-  	console.log('from main ' + $rootScope.user);
-  	console.log($rootScope.user);
-  	$("#profLink").attr("href","#/profile"+$rootScope.user.username);
-
+  .controller('ProfileCtrl', function ($scope, $firebase, $routeParams, $http, md5) {
     var ref = new Firebase('https://devflow.firebaseio.com/users');
 	var sync = $firebase(ref);
 	$scope.user = {};

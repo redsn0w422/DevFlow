@@ -12,8 +12,6 @@
  myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http, md5, $rootScope) {
     console.log('from main ' + $rootScope.user);
     console.log($rootScope.user);
-    $("#profLink").attr("href","#/profile"+$rootScope.user.username);
-    
     $scope.results = [];
     $scope.hashedEmail = "http://www.gravatar.com/avatar/";
     
