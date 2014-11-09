@@ -25,9 +25,10 @@
 <form class="form-inline global-search" role="form">
   <div class="form-group">
     <label class="sr-only">Enter search terms</label>
-    <input type="search" class="form-control" name="searchquery" placeholder="Search for a user"/>
+    <input type="search" class="form-control" name="searchquery" placeholder="Search for a user" ng-model="query"/>
   </div>
-  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" /></button>
+  <button type="submit" class="btn btn-primary" ng-click="searchOnClick()"><span class="glyphicon glyphicon-search" /></button>
+  <input ng-model="name"></input>
 </form>
 
 <!-- Top starred -->
