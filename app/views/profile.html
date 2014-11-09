@@ -65,3 +65,13 @@
     </div>
 </div>
 </div>
+<div class="error" ng-show="!foundUsername" ng-cloak>
+	<h1>pls</h1>
+</div>
+<div class="profile" ng-show="foundUsername" ng-cloak>
+	<img src="{{hashedEmail}}">
+	<p>{{user.name}}</p>
+	<p>Languages: {{user.progLang}}</p>
+	<p>Twitter: {{user.twitter}}</p>
+</div>
+
