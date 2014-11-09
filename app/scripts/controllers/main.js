@@ -18,15 +18,14 @@ myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http) {
         .success(function(data) {
         var hitCount = 0;
         $scope.results = [];
-        var magic = new RegExp(".*"+$scope.query+".*");
+        var magic = new RegExp(".*"+($scope.query.toLowerCase())+".*");
             for (var key in data) {
                 var obj = data[key];
-                if (magic.test(obj.name)) {
+                if (magic.test( (obj.name.toLowerCase()) )) {
                     ++hitCount;
                     $scope.results.push(obj.name);
                 }
             }
-            console.log($scope.results);
             if (hitCount > 0) {
                 $scope.name="Found " + hitCount + " Users with that name";
             } else {
