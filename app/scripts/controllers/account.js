@@ -7,8 +7,9 @@
  * Provides rudimentary account management functions.
  */
 angular.module('devFlowApp')
-  .controller('AccountCtrl', function ($scope, user, simpleLogin, fbutil, $timeout) {
+  .controller('AccountCtrl', function ($scope, user, simpleLogin, fbutil, $timeout, $rootScope) {
     $scope.user = user;
+    $rootScope.user = user;
     $scope.logout = simpleLogin.logout;
     $scope.messages = [];
     loadProfile(user);
