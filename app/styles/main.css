@@ -6,7 +6,7 @@ body {
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
+/*.marketing,*/
 .footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -52,18 +52,18 @@ body {
 }
 
 /* Supporting marketing content */
-.marketing {
+/*.marketing {
   margin: 40px 0;
 }
 .marketing p + h4 {
   margin-top: 28px;
-}
+}*/
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
   .header,
-  .marketing,
+  /*.marketing,*/
   .footer {
     padding-left: 0;
     padding-right: 0;
@@ -75,5 +75,35 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+}
+
+global-search {
+    text-align:center;
+    padding:10px;
+  }
+
+.global-search * {
+  display:inline-block;
+  margin-bottom:0;
+}
+
+.global-search .form-control {
+    width:120px;
+}
+
+.global-search a {
+  display:block;
+  padding-top:10px;
+}
+
+@media (min-width:400px){
+   .global-search {
+    padding: 20px 0;
+    text-align:center;
+    }
+
+   .global-search .form-control {
+    width:300px;
   }
 }

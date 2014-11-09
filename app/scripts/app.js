@@ -17,5 +17,6 @@ angular.module('devFlowApp', [
     'ngTouch',
     'firebase',
     'firebase.utils',
-    'simpleLogin'
+    'simpleLogin',
+    'angular-md5'
   ]);

@@ -1,20 +1,15 @@
 <div class="jumbotron">
-  <h1>DevFlow</h1>
+  <img src="../images/logo.png" height="198" width="523"/>
   <p class="lead">
     Learn new developer workflows
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
 </div>
 
-<div class="row marketing">
+<!-- <div class="row marketing">
   <h4>Firebase</h4>
   <p>
     Firebase is a powerful API to store and sync data in realtime.
-  </p>
-
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
   </p>
 
   <h4>Angular</h4>
@@ -24,4 +19,18 @@
 
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+</div> -->
+
+<!-- search -->
+<form class="form-inline global-search" role="form">
+  <div class="form-group">
+    <label class="sr-only">Enter search terms</label>
+    <input type="search" class="form-control" name="searchquery" placeholder="Search for a user" ng-model="query"/>
+  </div>
+  <button type="submit" class="btn btn-primary" ng-click="searchOnClick()"><span class="glyphicon glyphicon-search" /></button>
+  <label>{{name}}</label>
+</form>
+<ul>
+    <li ng-repeat="result in results">{{result}}</li>
+</ul>
+<!-- Top starred -->

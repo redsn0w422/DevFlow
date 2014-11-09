@@ -67,6 +67,11 @@ angular.module('devFlowApp')
         controller: 'LoginCtrl'
       })
 
+      .when('/profile/:username', {
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl'
+      })
+
       .when('/chat', {
         templateUrl: 'views/chat.html',
         controller: 'ChatCtrl'

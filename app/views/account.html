@@ -1,74 +1,137 @@
+<div class="row">
+  <div style="width:400px; margin-left:auto; margin-right:auto;">
+    <h3>Profile</h3>
 
-<div class="row-fluid">
-<div class="col-md-4">
-  <h3>Profile</h3>
+    <form role="form">
 
-  <form role="form">
-    <p class="form-group">
-      <label>Account ID</label>
-      <br />{{user.uid}}
-    </p>
+      <div class="form-group">
+        <label class="control-label">Username</label>
+        <input type-"text" name="username" ng-model="profile.username" class="form-control settings-input">
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label">Name</label>
+        <input type="text" name="name" ng-model="profile.name" class="form-control settings-input">
+      </div>
 
-    <p class="form-group">
-      <label>Name:</label>
-      <input type="text" name="name" ng-model="profile.name" class="form-control" />
-    </p>
+      <div class="form-group">
+        <label class="control-label">Type of Maker</label>
+        <input type="text" name="type" ng-model="profile.type" class="form-control settings-input">
+      </div>
 
-    <p class="form-group">
-      <label>Email:</label>
-      <input type="text" name="email" ng-model="profile.email" class="form-control" />
-    </p>
-  </form>
+      <div class="form-group">
+        <label class="control-label">Bio</label>
+        <input type="text" name="bio" ng-model="profile.bio" class="form-control settings-input">
+      </div>
 
-  <p>
-    <button role="button" ng-click="logout()" class="btn btn-danger">Log Out</button>
-  </p>
+      <div class="form-group">
+        <label class="control-label">Programming Languages</label>
+        <input type="text" name="programmingLanguages" ng-model="profile.progLang" class="form-control settings-input">
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Favorite IDE</label>
+        <input type="text" name="favoriteIDE" ng-model="profile.favIDE" class="form-control settings-input">
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label">Favorite Design Tool</label>
+        <input type="text" name="favoriteDesignTool" ng-model="profile.favDesTool" class="form-control settings-input">
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label">Occupation</label>
+        <input type="text" name="occupation" ng-model="profile.occ" class="form-control settings-input">
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Projects</label>
+        <input type="text" name="projects" ng-model="profile.projects" class="form-control settings-input">
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Twitter</label>
+        <div class="input-group settings-input">
+          <span class="input-group-addon">@</span>
+          <input type="text" name="twitterHandle" ng-model="profile.twitter" class="form-control settings-input">
+        </div>
+      </div>
+
+      <div class="form-group">          
+        <label class="control-label">GitHub</label>
+        <div class="input-group settings-input">
+          <span class="input-group-addon">github.com/</span>
+          <input type="text" name="githubUsername" ng-model="profile.github" class="form-control settings-input">
+        </div>
+      </div>     
+
+      <div class="form-group">
+        <label class="control-label">Personal Site</label>
+        <div class="input-group settings-input">
+          <span class="input-group-addon">http://</span>
+          <input type="text" name="personalSite" ng-model="profile.personalSite" class="form-control settings-input">
+        </div>
+      </div>
+
+      <div style="margin-left:auto; margin-right:auto; width:200px;">
+        <button type="button" class="btn btn-success btn-medium btn-block" ng-click="">Save changes</button>
+      </div>
+    </form>
+
+    <br/>
+
+    <div class="text-center">
+      <button role="button" ng-click="logout()" class="btn btn-danger">Log Out</button>
+    </div>
+  </div>
 </div>
 
-<div class="col-md-4">
-<form role="form">
-  <h3>Change Password</h3>
+<div class="row">
+  <div class="col-md-6">
+    <form role="form">
+      <h3>Change Password</h3>
 
-  <p class="form-group">
-    <label>Old Password:</label>
-    <input type="password" ng-keypress="clear()" ng-model="oldpass" class="form-control" />
-  </p>
+      <p class="form-group">
+        <label>Old Password:</label>
+        <input type="password" ng-keypress="clear()" ng-model="oldpass" class="form-control" />
+      </p>
 
-  <p class="form-group">
-    <label>New Password:</label>
-    <input type="password" ng-keypress="clear()" ng-model="newpass" class="form-control" />
-  </p>
+      <p class="form-group">
+        <label>New Password:</label>
+        <input type="password" ng-keypress="clear()" ng-model="newpass" class="form-control" />
+      </p>
 
-  <p class="form-group">
-    <label>Confirm New Password:</label>
-    <input type="password" ng-keypress="clear()" ng-model="confirm" class="form-control" />
-  </p>
+      <p class="form-group">
+        <label>Confirm New Password:</label>
+        <input type="password" ng-keypress="clear()" ng-model="confirm" class="form-control" />
+      </p>
 
-  <button class="btn btn-primary" ng-click="changePassword(oldpass, newpass, confirm)">change password</button>
+      <button class="btn btn-primary" ng-click="changePassword(oldpass, newpass, confirm)">change password</button>
 
-  <p class="error" ng-show="err">{{err}}</p>
-  <p class="good" ng-show="msg">{{msg}}</p>
-</form>
-</div>
+      <p class="error" ng-show="err">{{err}}</p>
+      <p class="good" ng-show="msg">{{msg}}</p>
+    </form>
+  </div>
 
-<div class="col-md-4">
-<form>
-  <h3>Change Email</h3>
+  <div class="col-md-6">
+    <form>
+      <h3>Change Email</h3>
 
-  <p class="form-group">
-    <label>New Email:</label>
-    <input type="text" ng-keypress="clear()" ng-model="newEmail" class="form-control" />
-  </p>
+      <p class="form-group">
+        <label>New Email:</label>
+        <input type="text" ng-keypress="clear()" ng-model="newEmail" class="form-control" />
+      </p>
 
-  <p class="form-group">
-    <label>Password:</label>
-    <input type="password" ng-keypress="clear()" ng-model="pass" class="form-control" />
-  </p>
+      <p class="form-group">
+        <label>Password:</label>
+        <input type="password" ng-keypress="clear()" ng-model="pass" class="form-control" />
+      </p>
 
-  <button class="btn btn-primary" ng-click="changeEmail(pass, newEmail)">update email</button>
-</form>
-</div>
+      <button class="btn btn-primary" ng-click="changeEmail(pass, newEmail)">update email</button>
+    </form>
+  </div>
 
 </div>
 <p class="clearfix"></p>
 <div ng-repeat="message in messages" class="alert alert-{{message.type}}">{{message.text}}</div>
+</div>
