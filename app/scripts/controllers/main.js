@@ -25,7 +25,7 @@ myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http) {
                 }
             }
             if (hitCount > 0) {
-                $scope.name="Found " + hitCount + " User";
+                $scope.name="Found " + hitCount + " Users with that name";
             } else {
                 $scope.name="Found no users by that name";
             }
