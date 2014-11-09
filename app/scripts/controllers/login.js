@@ -7,7 +7,11 @@
  * Manages authentication to any active providers.
  */
 angular.module('devFlowApp')
-  .controller('LoginCtrl', function ($scope, simpleLogin, $location) {
+  .controller('LoginCtrl', function ($scope, simpleLogin, $location, $rootScope) {
+    console.log('from main ' + $rootScope.user);
+    console.log($rootScope.user);
+    $("#profLink").attr("href","#/profile"+$rootScope.user.username);
+    
     $scope.passwordLogin = function(email, pass) {
       login('password', {
         email: email,
