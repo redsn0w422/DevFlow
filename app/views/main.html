@@ -3,7 +3,7 @@
   <p class="lead">
     Learn new developer workflows
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
 </div>
 
 <!-- <div class="row marketing">
@@ -30,5 +30,7 @@
   <button type="submit" class="btn btn-primary" ng-click="searchOnClick()"><span class="glyphicon glyphicon-search" /></button>
   <label>{{name}}</label>
 </form>
-
+<ul>
+    <li ng-repeat="result in results">{{result}}</li>
+</ul>
 <!-- Top starred -->
