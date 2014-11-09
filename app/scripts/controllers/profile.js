@@ -17,15 +17,11 @@ angular.module('devFlowApp')
 
 	$http.get('https://devflow.firebaseio.com/users.json')
 	.success(function(data) {
-		console.log(data);
-		
 		for (var key in data) {
 			var obj = data[key];
 			console.log(obj);
-			if (obj.username === $routeParams.username) {
-				console.log('works');
+			if (obj.username.toLowerCase() === $routeParams.username.toLowerCase()) {
 				$scope.user = obj;
-				console.log($scope.user);
 				$scope.foundUsername = true;
 				$scope.hashedEmail+=md5.createHash($scope.user.email);
 			}
