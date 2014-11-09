@@ -20,7 +20,9 @@ myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http, m
         .success(function(data) {
         var hitCount = 0;
         $scope.results = [];
-        var magic = new RegExp(".*"+($scope.query.toLowerCase())+".*");
+        if ($scope.query)
+        {
+            var magic = new RegExp(".*"+($scope.query.toLowerCase())+".*");
             for (var key in data) {
                 var obj = data[key];
                 if (magic.test( (obj.name.toLowerCase()) )) {
@@ -34,6 +36,22 @@ myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http, m
             } else {
                 $scope.name="Found no users by that name";
             }
-        });
-    };
-  });
+        } else {
+            var magic = new RegExp(".*");
+            for (var key in data) {
+                var obj = data[key];
+                if (magic.test( (obj.name.toLowerCase()) )) {
+                    ++hitCount;
+                    obj.hashedEmail = $scope.hashedEmail + md5.createHash(obj.email);
+                    $scope.results.push(obj);
+                }
+            }
+            if (hitCount > 0) {
+                $scope.name="Found " + hitCount + " Users with that name";
+            } else {
+                $scope.name="Found no users by that name";
+            }
+        }
+    });
+  };
+});

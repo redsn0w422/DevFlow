@@ -3,33 +3,17 @@
   <p class="lead">
     Learn new developer workflows
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-</div>
-
-<!-- <div class="row marketing">
-  <h4>Firebase</h4>
-  <p>
-    Firebase is a powerful API to store and sync data in realtime.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div> -->
-
-<!-- search -->
-<form class="form-inline global-search" role="form">
-  <div class="form-group">
-    <label class="sr-only">Enter search terms</label>
-    <input type="search" class="form-control" name="searchquery" placeholder="Search for a user" ng-model="query"/>
-  </div>
-  <button type="submit" class="btn btn-primary" ng-click="searchOnClick()"><span class="glyphicon glyphicon-search" /></button>
-  <label>{{name}}</label>
-</form>
+  
+  <!-- search -->
+  <form class="form-inline global-search" role="form">
+    <div class="form-group">
+      <label class="sr-only">Enter search terms</label>
+      <input type="search" class="form-control" name="searchquery" placeholder="Search for a user" ng-model="query"/>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="searchOnClick()"><span class="glyphicon glyphicon-search" /></button>
+    <br/>
+    <label>{{name}}</label>
+  </form>
   <div class="row">
     <div ng-repeat="result in results" class="col-xs-4">
       <a href="/#/profile/{{result.username}}">
@@ -47,11 +31,30 @@
     <div class="col-xs-12">
     </div>
   </div>
+
+</div>
+
+<!-- <div class="row marketing">
+  <h4>Firebase</h4>
+  <p>
+    Firebase is a powerful API to store and sync data in realtime.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div> -->
+
+
 <!-- <ul>
     <li ng-repeat="result in results"><a href="/#/profile/{{result.username}}">
 
       {{result.name}}</a>
 
     </li>
-</ul> -->
-<!-- Top starred -->
+  </ul> -->
+  <!-- Top starred -->
