@@ -12,8 +12,13 @@
  myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http, md5, $rootScope) {
     $scope.results = [];
     $scope.hashedEmail = "http://www.gravatar.com/avatar/";
-    var uid = $rootScope.user.uid;
+    var uid = "";
+    if ($rootScope.user) {
+        uid = $rootScope.user.uid;
+    }
+
     $scope.user = {};
+    $scope.name = "";
 
     $http.get('https://devflow.firebaseio.com/users.json')
     .success(function(data) {
