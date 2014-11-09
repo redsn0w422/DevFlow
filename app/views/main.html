@@ -22,10 +22,12 @@
 </div> -->
 
 <!-- search -->
-<form class="navbar-form" role="search">
+<form class="form-inline global-search" role="form">
   <div class="form-group">
-    <input type="text" class="form-control" />
+    <label class="sr-only" for="">Enter search terms</label>
+    <input type="search" class="form-control" id="k" name="k">
+    <input id="cn" name="cn" type="hidden" value="false" />
   </div>
-  <button type="submit" class="btn btn-primary">Search</button>
+  <button type="submit" id="s" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
 </form>
 <!-- Top starred -->
