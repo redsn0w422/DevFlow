@@ -1,16 +1,16 @@
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <!-- //angularfire -->
-          <li><a ng-href="#/chat">chat</a></li>
-          <li>
-            <a ng-hide-auth="" href="#/login">log in</a>
-            <a ng-show-auth="" href="#/account">account</a>
-          </li>
-          </ul>
-          <!-- <img src="images/logo.png" height="50" width="auto"/> -->
-          <h3 class="text-muted">devFlow</h3>
-      </div>
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <!-- //angularfire -->
+    <li><a ng-href="#/chat">chat</a></li>
+    <li>
+      <a ng-hide-auth="" href="#/login">log in</a>
+      <a ng-show-auth="" href="#/account">account</a>
+    </li>
+  </ul>
+  <!-- <img src="images/logo.png" height="50" width="auto"/> -->
+  <h3 class="text-muted">devFlow</h3>
+</div>
 
 <h2>Login Page</h2>
 
@@ -32,7 +32,7 @@
     <button  class="btn btn-primary" ng-click="passwordLogin(email, pass)" ng-hide="createMode">Log In</button>
     <button  class="btn btn-default" ng-click="createMode = true" ng-hide="createMode">Register</button>
     <button  class="btn btn-primary" ng-cloak ng-show="createMode"
-            ng-click="createAccount(email, pass, confirm)">Create Account</button>
+    ng-click="createAccount(email, pass, confirm)">Create Account</button>
     <button  class="btn btn-default" ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
   </p>
 </form>
