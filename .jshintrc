@@ -1,3 +1,5 @@
+/*global Firebase */
+
 {
   "node": true,
   "browser": true,
