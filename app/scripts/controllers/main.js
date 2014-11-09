@@ -18,9 +18,10 @@ myapp.controller('MainCtrl', function ($scope, $firebase, $routeParams, $http) {
         .success(function(data) {
         var hitCount = 0;
         $scope.results = [];
+        var magic = new RegExp(".*"+$scope.query+".*");
             for (var key in data) {
                 var obj = data[key];
-                if (obj.name === $scope.query) {
+                if (magic.test(obj.name)) {
                     ++hitCount;
                     $scope.results.push(obj.name);
                 }
