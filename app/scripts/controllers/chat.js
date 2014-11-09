@@ -9,7 +9,11 @@
 angular.module('devFlowApp')
   .controller('ChatCtrl', function ($scope, fbutil, $timeout, $rootScope, $http) {
     // synchronize a read-only, synchronized array of messages, limit to most recent 10
-    var uid = $rootScope.user.uid;
+    var uid = "";
+    if ($rootScope.user) {
+        uid = $rootScope.user.uid;
+    }
+
     $scope.user = {};
 
     $http.get('https://devflow.firebaseio.com/users.json')

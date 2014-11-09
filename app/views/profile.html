@@ -1,7 +1,8 @@
 <div class="header">
 	<ul class="nav nav-pills pull-right">
-		<li class="active"><a ng-href="#">Home</a></li>
+		<li><a ng-href="#">home</a></li>
 		<!-- //angularfire -->
+		<li class="active"><a ng-show-auth="" ng-href="#/profile/{{user.username}}">profile</a></li>
 		<li><a ng-href="#/chat">chat</a></li>
 		<li>
 			<a ng-hide-auth="" href="#/login">log in</a>
