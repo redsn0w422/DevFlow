@@ -1,8 +1,11 @@
+
+<img align="center" src="app/images/logo.png"></img><br>
+
 DevFlow
 ==============
 
 ## What is DevFlow?
-Network for developers to share workflows.
+Deflow is a network for developers and designers to share how they work. You can build the site following the instructions below or visit the website live [here](https://devflow.firebaseapp.com). Built at CodeDay Chicago Fall 2014.
 
 ## Building DevFlow
 ```sh
@@ -19,4 +22,5 @@ $ grunt build
 $ firebase deploy
 ```
 
-Available [here](https://devflow.firebaseapp.com).
+## License
+[MIT License](LICENSE)
