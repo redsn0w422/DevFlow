@@ -7,8 +7,25 @@
  * A demo of using AngularFire to manage a synchronized list.
  */
 angular.module('devFlowApp')
-  .controller('ChatCtrl', function ($scope, fbutil, $timeout) {
+  .controller('ChatCtrl', function ($scope, fbutil, $timeout, $rootScope, $http) {
     // synchronize a read-only, synchronized array of messages, limit to most recent 10
+    var uid = "";
+    if ($rootScope.user) {
+        uid = $rootScope.user.uid;
+    }
+
+    $scope.user = {};
+
+    $http.get('https://devflow.firebaseio.com/users.json')
+    .success(function(data) {
+        for (var key in data) {
+            var obj = data[key];
+            if (key.toLowerCase() === uid.toLowerCase()) {
+                $scope.user = obj;
+            }
+        }
+    });
+
     $scope.messages = fbutil.syncArray('messages', {limit: 10});
 
     // display any errors

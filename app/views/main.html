@@ -1,25 +1,52 @@
-<!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <!-- //angularfire -->
-          <li><a ng-href="#/chat">chat</a></li>
-          <li>
-            <a ng-hide-auth="" href="#/login">log in</a>
-            <a ng-show-auth="" href="#/account">account</a>
-          </li>
-          </ul>
-          <!-- <img src="images/logo.png" height="50" width="auto"/> -->
-          <h3 class="text-muted">devFlow</h3>
-      </div>
-      
+<div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li class="active"><a ng-href="#">home</a></li>
+      <!-- //angularfire -->
+      <li><a ng-show-auth="" ng-href="#/profile/{{user.username}}">profile</a></li>
+      <li><a ng-href="#/chat">chat</a></li>
+      <li>
+        <a ng-hide-auth="" href="#/login">log in</a>
+        <a ng-show-auth="" href="#/account">account</a>
+      </li>
+      </ul>
+      <!-- <img src="images/logo.png" height="50" width="auto"/> -->
+      <h3 class="text-muted">devFlow</h3>
+     </div>
+
 <div class="jumbotron">
-  <img src="../images/logo.png" height="198" width="523"/>
+  <img src="../images/logo.png" height="180"/>
   <p class="lead">
     Learn new developer workflows
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+
+  <!-- search -->
+  <form class="form-inline global-search" role="form">
+    <div class="form-group">
+      <label class="sr-only">Enter search terms</label>
+      <input type="search" class="form-control" name="searchquery" placeholder="Search for a user" ng-model="query"/>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="searchOnClick()"><span class="glyphicon glyphicon-search" /></button>
+    <br/>
+    <label>{{name}}</label>
+  </form>
+  <div class="row text-center">
+    <div ng-repeat="result in results" class="col-xs-4">
+      <a href="/#/profile/{{result.username}}">
+        <button class="btn btn-default btn-block" height="200" style="margin:5px;">
+          <img src="{{result.hashedEmail}}"/>
+          <br/>
+          {{result.name}}
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+    </div>
+  </div>
+
 </div>
 
 <!-- <div class="row marketing">
@@ -37,16 +64,12 @@
   <p>Spectacular Test Runner for JavaScript.</p>
 </div> -->
 
-<!-- search -->
-<form class="form-inline global-search" role="form">
-  <div class="form-group">
-    <label class="sr-only">Enter search terms</label>
-    <input type="search" class="form-control" name="searchquery" placeholder="Search for a user" ng-model="query"/>
-  </div>
-  <button type="submit" class="btn btn-primary" ng-click="searchOnClick()"><span class="glyphicon glyphicon-search" /></button>
-  <label>{{name}}</label>
-</form>
-<ul>
-    <li ng-repeat="result in results"><a href="/#/profile/{{result.username}}">{{result.name}}</a></li>
-</ul>
-<!-- Top starred -->
+
+<!-- <ul>
+    <li ng-repeat="result in results"><a href="/#/profile/{{result.username}}">
+
+      {{result.name}}</a>
+
+    </li>
+  </ul> -->
+  <!-- Top starred -->

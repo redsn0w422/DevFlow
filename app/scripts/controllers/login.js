@@ -12,7 +12,7 @@ angular.module('devFlowApp')
       login('password', {
         email: email,
         password: pass,
-        rememberMe: true
+        rememberMe: false
       });
     };
 

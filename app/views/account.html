@@ -1,9 +1,8 @@
-<!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
+<div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a ng-href="#">Home</a></li>
+          <li><a ng-href="#">home</a></li>
           <!-- //angularfire -->
+          <li><a ng-show-auth="" ng-href="#/profile/{{user.username}}">profile</a></li>
           <li><a ng-href="#/chat">chat</a></li>
           <li class="active">
             <a ng-hide-auth="" href="#/login">log in</a>
@@ -22,7 +21,7 @@
 
       <div class="form-group">
         <label class="control-label">Username</label>
-        <input type-"text" name="username" ng-model="profile.username" class="form-control settings-input">
+        <input type="text" name="username" ng-model="profile.username" class="form-control settings-input">
       </div>
       
       <div class="form-group">
