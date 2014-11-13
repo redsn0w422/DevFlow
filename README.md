@@ -22,5 +22,13 @@ $ grunt build
 $ firebase deploy
 ```
 
+## Team      
+[Yasha Mostofi](https://github.com/redsn0w422) <br>
+[Brian Truong](https://github.com/briantruong777) <br>
+[Niraj Pant](https://github.com/xasos) <br>
+[James Zhu](https://github.com/jzhu98) <br>
+[Kian Fotovat](https://github.com/kianfotovat) <br>
+[Dillon Hammond](https://github.com/dchammond) <br>
+
 ## License
 [MIT License](LICENSE)
